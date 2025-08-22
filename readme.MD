@@ -156,7 +156,7 @@ If you're looking to connect, discuss DevOps/SRE, get guidance, or collaborate:
 ## 🐍 GitHub Contribution Snake
 
 <div align="center">
-  <img src="https://github.com/MEDASANI-CHARAN/MEDASANI-CHARAN/blob/output/github-contribution-grid-snake.svg" alt="snake animation" />
+  <img src="https://github.com/MEDASANI-CHARAN/snake/blob/output/github-contribution-grid-snake.svg" alt="snake animation" />
 </div>
 
 ---

@@ -9,14 +9,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
+      - uses: dtolnay/rust-toolchain@stable
 
       - run: bun install --frozen-lockfile
 
+      - run: bun run build
+        working-directory: packages/solver-r
+
       - run: npm run type
-      - run: npm run lint
+
       - run: bun test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: cargo test
+        working-directory: packages/solver-r
+
+      - run: npm run lint
 
   test-action:
     runs-on: ubuntu-latest
@@ -35,20 +43,14 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake-ocean.svg?color_snake=orange&color_dots=#dadcdf94,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-            dist/github-contribution-grid-snake-grey.svg?color_snake=111&color_dots=#eee,#aaa,#888,#666,#444
-            dist/github-contribution-grid-snake.gif
-            dist/github-contribution-grid-snake-ocean.gif?color_snake=orange&color_dots=#dadcdf94,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            dist/github-contribution-grid-snake.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
       - name: ensure the generated file exists
         run: |
           ls dist
           test -f dist/github-contribution-grid-snake.svg
           test -f dist/github-contribution-grid-snake-dark.svg
-          test -f dist/github-contribution-grid-snake-ocean.svg
-          test -f dist/github-contribution-grid-snake-grey.svg
           test -f dist/github-contribution-grid-snake.gif
-          test -f dist/github-contribution-grid-snake-ocean.gif
 
       - uses: crazy-max/ghaction-github-pages@v4.1.0
         with:
@@ -79,16 +81,14 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake-ocean.svg?color_snake=orange&color_dots=#dadcdf94,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-            dist/github-contribution-grid-snake-grey.svg?color_snake=111&color_dots=#eee,#aaa,#888,#666,#444
+            dist/github-contribution-grid-snake-blue.svg?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
 
       - name: ensure the generated file exists
         run: |
           ls dist
           test -f dist/github-contribution-grid-snake.svg
           test -f dist/github-contribution-grid-snake-dark.svg
-          test -f dist/github-contribution-grid-snake-ocean.svg
-          test -f dist/github-contribution-grid-snake-grey.svg
+          test -f dist/github-contribution-grid-snake-blue.svg
 
       - uses: crazy-max/ghaction-github-pages@v4.1.0
         with:

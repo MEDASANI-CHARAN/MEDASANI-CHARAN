@@ -15,7 +15,7 @@ export const drawSnake = (
   const cells = snakeToCells(snake);
 
   for (let i = 0; i < cells.length; i++) {
-    const u = (i + 1) * 0.6;
+    const u = Math.min((i + 1) * 0.6, o.sizeCell * 0.3);
 
     ctx.save();
     ctx.fillStyle = o.colorSnake;

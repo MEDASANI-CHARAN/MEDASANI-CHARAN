@@ -5,5 +5,8 @@
   "outside",
   "getPathToPose",
   "getPathTo",
-  "svg"
+  "svg",
+  "rust",
+  "rust_astar",
+  "rust_astar_snake"
 ]

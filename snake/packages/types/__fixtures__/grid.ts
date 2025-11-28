@@ -80,10 +80,59 @@ export const closedO = createFromAscii(`
 `);
 export const tunnels = createFromAscii(`
 
-  ###   ###   ###    
-  #.#   #.#   #.#
-  #.#   ###   # #
+  ###   ###   ###  ####   
+  #.#   #.#   #.#  #..#
+  #.#   ###   # #  #  #
 `);
+export const line = createFromAscii(`
+
+  #######  
+     .. #
+  ##### #
+`);
+export const trap = createFromAscii(`
+ .# 
+###  
+
+`);
+export const what = createFromAscii(`
+ #
+..#
+ .#
+ # 
+`);
+export const eight = createFromAscii(`
+  
+  #####
+  #   #
+  # # ####
+  #      #
+  #### # #
+     #.  #
+     #####  
+`);
+export const hourglass = createFromAscii(`
+  
+  ######   
+  #    #
+  #   .#
+  ## ###
+   # #
+   # #
+   # #
+  ## ###
+  #    #
+  # .  #
+  ######
+`);
+export const labyrithn = createFromAscii(`
+################################################## #
+#                                                  #
+# ##################################################
+#                                                  #
+################################################## #
+#.                                                 #
+####################################################`);
 
 const createRandom = (width: number, height: number, emptyP: number) => {
   const grid = createEmptyGrid(width, height);

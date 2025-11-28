@@ -10,7 +10,7 @@
 [![Topmate](https://img.shields.io/badge/Topmate-Book%20a%201:1-green?logo=meetup&style=flat)](https://topmate.io/charan_medasani)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&style=flat)](https://www.linkedin.com/in/charan-medasani/)
 [![Medium](https://img.shields.io/badge/Medium-Blogs-black?logo=medium&style=flat)](https://medium.com/@medasanicharan66)
-[![Gmail](https://img.shields.io/badge/Email-medasanicharan66@gmail.com-red?logo=gmail&style=flat)](mailto:devsecops.cloudnai@gmail.com)
+[![Gmail](https://img.shields.io/badge/Email-medasanicharan66@gmail.com-red?logo=gmail&style=flat)](mailto:medasanicharan66@gmail.com)
 
 ---
 
